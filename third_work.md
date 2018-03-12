@@ -30,4 +30,21 @@ struct ListNode {
 	 	return true;
  }
  ```
- 
+ ## 方法二
+#### 也可以比较 链表节点的地址 比较节点和下一个节点的值，如果下一个节点的地址值比该节点的地址值小或者相等的话就是循环链表
+## 代码实现：
+```cpp
+bool dev(ListNode*head)  
+{       
+ListNote *temp = head;    
+while(temp!=NULL &&temp->next!= NULL)
+{    
+if (temp->next<=temp)      
+{   
+return true;           
+}    
+temp = temp->next;      
+}    
+return false;  
+} ；
+```
