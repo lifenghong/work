@@ -18,7 +18,7 @@
 class Solution {  
 public:  
     vector<int> countBits(int num) //countBits 对 num
-    {  的设置位进行计数 并返回设置为的数目
+    {  //的设置位进行计数 并返回设置为的数目
         vector<int> answer; //定义大小未知的数组 
         int count;  
         int j;  
