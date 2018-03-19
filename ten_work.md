@@ -24,8 +24,8 @@ public:
             return false;
         if(A.length()==0)
             return true;
-       char temp = new StringBuilder();
-        temp.Append(A);
+       var temp = new StringBuilder();//不知道为啥，char报错
+        temp.Append(A);
         for (int s = 0; s < A.Length; s++)
         {
             temp.Remove(0, 1);
