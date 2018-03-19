@@ -14,6 +14,7 @@ Output: false
 ```
 ## 分析：
 ###### 这道题用以前的方法的话也可以做，不是特别麻烦，定义数组移位就可以，最近一直在做string函数的题，就参考答案用了string函数，就很简单了string：：Append()在string后加元素，string。remove移除数组中元素，比较简单。两个函数就可以，初级阶段，还是一练习为主，
+## 代码：
 ```cpp
 
 class Solution {
