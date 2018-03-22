@@ -34,6 +34,7 @@ public:
         if(n <= 0) return false;  
         return ((int)pow(3, (int)(log(INT_MAX)/log(3))) % n) == 0;  
     }  
-};  
+};  
+```
 ## 总结：
 ##### pow是C语言库函数中的数学函数之一，其声明为double pow(double n, double r);声明与math.h。其功能为求n的r次幂，并作为返回值返回。log和write函数我还没有弄懂明天会继续做这类题
