@@ -17,14 +17,14 @@ Output: False
 #include <string>  
 using namespace std;  
   
-bool yiwei(string src,string des)  
+bool yiwei(string s1,string  s2)  
 {  
-    int len1 = src.size();  
-    int len2 = des.size();  
+    int len1 = s1.size();  
+    int len2 =  s2.size();  
     int i,j = 0;  
     for(i = 0;i < len1 + len2;i++)  
     {  
-        if(src[i%len1] == des[j])  
+        if(s1[i%len1] == s2[j])  
         {  
             j++;  
             if(j == len2)  
