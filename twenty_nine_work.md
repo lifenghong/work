@@ -26,7 +26,7 @@ words will have a length in the range [10, 1000].
 Every words[i] will consist of lowercase letters, and have length in range [1, 15].
 
 ```
-## 分析：先分析所給字符串有多少g个字母，全部化成小写来计数。然后再在向量找出符合要求的长度最短的一个输出：
+## 分析：先分析所給字符串有多少个字母，全部化成小写来计数。然后再在向量找出符合要求的长度最短的一个输出：
 ## 代码：
 ```cpp
 class Solution {
