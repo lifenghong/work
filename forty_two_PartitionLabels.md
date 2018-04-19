@@ -1,0 +1,42 @@
+## 问题：Partition Labels
+```
+A string S of lowercase letters is given. We want to partition this string into as many parts as possible so that each letter appears in at most one part, and return a list of integers representing the size of these parts.
+
+Example 1:
+Input: S = "ababcbacadefegdehijhklij"
+Output: [9,7,8]
+Explanation:
+The partition is "ababcbaca", "defegde", "hijhklij".
+This is a partition so that each letter appears in at most one part.
+A partition like "ababcbacadefegde", "hijhklij" is incorrect, because it splits S into less parts.
+```
+## 分析：
+##### 这道题是我第一次尝试用哈希表去做题，还是不太懂哈希的原理，做完题目感觉似懂非懂，哈希表的原理百度讲的不是特别清楚，这几天会多练；这道题的思路其实不难，但实现却是很不容易，用哈希表记录下数组中每个元素的位子，然后遍历循环计算每个字符在该字符串中互出最后出现的位
+##### 置，然后顺次扫描字符串，并记录该字符出现的最后的位置，一旦发现当前的扫描位置与最终出现的位置相等，就说明可以分割，记录下位置，和长度就可啦
+## 代码：
+```cpp
+class Solution {
+public:
+    vector<int> partitionLabels(string S) {
+        unordered_map<char,int> hash;
+        vector<int>output;
+        for(int i=0;i<S.size();i++)
+        {
+            hash[S[i]]=i;
+        }
+        int length=0;
+        int last=-1,end=-1;
+        for(int i=0;i<S.size();i++)
+        {
+            end=max(end,hash[S[i]]);
+            if(end==i)
+            {
+                length=end-last;
+                output.push_back(length);
+                    last=i;
+            }
+        }
+        return output;
+    }
+};
+```
