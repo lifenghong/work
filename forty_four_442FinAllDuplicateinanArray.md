@@ -32,10 +32,11 @@ public:
             }
             
         }
-        return vs;}
-        
-        ## 代码二：
-        ```cpp
+        return vs;
+        }
+   ```
+   ## 代码二：
+   ```cpp
   class Solution {
     public:
     vector<int> findDuplicates(vector<int>& nums) {
