@@ -9,6 +9,7 @@ Return any permutation of T (as a string) that satisfies this property.
 ## 分析：
 ##### 给定两个字符串S和T，然后返回S字符串和T中和S不同的元素，S中的元素保持原来的顺序，T中的元素可以查在S的任意位置。思路就是先找到T中与S不同的元素，储存在另一个字符数组中，最后相连S和该字符数组，返回相加后的字符串
 ## 代码：
+```cpp
 class Solution {
 public:
     string customSortString(string S, string T) {
